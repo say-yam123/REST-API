@@ -1,46 +1,53 @@
-Labs 11 and 12: Data Visualization and Application Hosting
+## 📋 Overview
 
-📋 Overview
+This lab focused on designing, implementing, and testing RESTful APIs for our application using Spring Boot. The goal was to enable communication between the frontend, backend, and database by exposing endpoints that perform business operations and data management.
 
-This section outlines the activities and accomplishments for Labs 11 and 12, focusing on visualizing our application's data using Python and deploying our backend service to Microsoft Azure for cloud hosting.
+## ⚙️ Prerequisites
 
-⚙️ Prerequisites
+To run and test the components from this lab, ensure the following are installed and configured:
 
-To run and test the components from these labs, ensure the following are installed and configured:
+**Programming Languages:** Java 17+  
 
-Programming Languages: Python 3.x, Java 17+
-Frameworks & Libraries:
-Python: pandas, matplotlib, mysql-connector-python
-Java: Spring Boot, Maven
-Database: MySQL Server (running and accessible)
-Cloud Infrastructure: Microsoft Azure account (Azure Cloud Shell)
-🔬 Lab 11: Data Visualization
+**Frameworks & Libraries:**  
+- Spring Boot  
+- Spring Web  
+- Spring Data JPA  
+- Maven  
 
-Objective: Extract data from the application database and generate meaningful visual reports.
+**Database:**  
+- MySQL Server (running and accessible)  
 
-What we did:
+**API Testing Tools:**  
+- Postman / Browser / cURL  
 
-Database Integration: Established a secure connection between a Python script (lab11_visualization.py) and our Spring Boot MySQL database.
-Data Extraction: Executed SQL queries to fetch key business metrics, such as customer subscription status, address type distribution, and preferred languages.
-Data Processing: Utilized the pandas library to clean and structure the tabular data for plotting.
-Visualization: Leveraged matplotlib to generate dynamic visual representations of our data, outputting various charts:
-Active vs. Expired Customers (Bar Chart)
-Address Types Distribution (Pie Chart)
-Preferred Languages (Bar Chart)
-Reporting: Automatically saved the generated plots as PNG images to the repository for easy access and review.
-☁️ Lab 12: Cloud Hosting
+---
 
-Objective: Deploy the Spring Boot backend application to the cloud to make it publicly accessible.
+# 🔬 Lab 10: API Development and Integration
 
-What we did:
+**Objective:** Create and test REST APIs to manage application data and establish communication between the backend services and database.
 
-Cloud Environment Setup: Configured the Azure Cloud Shell for our deployment environment.
-Configuration Adjustments: Resolved database connection strings and environment variables to ensure the backend could communicate with the database while hosted on Azure.
-Deployment Process: Packaged the Spring Boot application using Maven and deployed the .jar file to Azure App Service.
-Troubleshooting: Overcame Azure regional policy restrictions and successfully spun up the instance.
-Verification: Verified the live API endpoints, confirming that the cloud-hosted backend is successfully processing requests.
-🔗 Application Link
+## What we did:
 
-Hosting URL: https://anmol-demo-final2026.azurewebsites.net/
-<img width="2662" height="1618" alt="image" src="https://github.com/user-attachments/assets/55ec5acf-f44d-4c08-b89c-aea6f24af43a" />
+### API Design
+Designed RESTful endpoints following standard HTTP methods (`GET`, `POST`, `PUT`, `DELETE`) to perform CRUD operations for application entities.
 
+### Controller Implementation
+Developed Spring Boot controller classes to handle incoming client requests and route them to the appropriate services.
+
+### Service Layer Integration
+Implemented business logic within service classes to process requests before interacting with the database layer.
+
+### Database Connectivity
+Integrated the APIs with the MySQL database using Spring Data JPA and repository interfaces for seamless data persistence.
+
+### API Testing
+Used Postman and browser-based requests to verify endpoint functionality, ensuring accurate request handling and response generation.
+
+### Data Exchange
+Implemented JSON-based request and response handling to enable efficient communication between client applications and backend services.
+
+### Validation and Error Handling
+Added input validation and exception handling mechanisms to ensure reliable and secure API behavior.
+
+### Reporting
+Successfully tested all endpoints and documented API request structures, response formats, and expected outputs for future development and maintenance.
