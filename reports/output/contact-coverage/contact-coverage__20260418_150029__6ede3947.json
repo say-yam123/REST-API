@@ -1,0 +1,96 @@
+{
+  "reportName" : "contact-coverage",
+  "format" : "HTML",
+  "runId" : "6ede3947",
+  "generatedAt" : "2026-04-18T09:30:29.188158100Z",
+  "durationMs" : 37,
+  "parameters" : {
+    "startDate" : null,
+    "endDate" : null,
+    "asOfDate" : "2026-04-18",
+    "status" : null,
+    "country" : null,
+    "contactType" : null,
+    "proofType" : null
+  },
+  "rowCount" : 6,
+  "columns" : [ "customer_id", "customer_name", "customer_status", "country_of_origin", "active_contact_count", "has_email", "has_phone", "latest_contact_end_date", "coverage_status" ],
+  "nullCounts" : {
+    "customer_id" : 0,
+    "customer_name" : 0,
+    "customer_status" : 0,
+    "country_of_origin" : 0,
+    "active_contact_count" : 0,
+    "has_email" : 0,
+    "has_phone" : 0,
+    "latest_contact_end_date" : 2,
+    "coverage_status" : 0
+  },
+  "duplicateRowCount" : 0,
+  "warnings" : [ ],
+  "outputFile" : "c:\\Users\\Anmol\\OneDrive\\Desktop\\Backend_Frontend\\reports\\output\\contact-coverage\\contact-coverage__20260418_150029__6ede3947.html",
+  "outputSizeBytes" : 2266,
+  "outputChecksumSha256" : "cff138b89e618c39a3595a51add85aabfbddfeb3068efe18470439a6af9fbaf7",
+  "sqlSnapshotFile" : "c:\\Users\\Anmol\\OneDrive\\Desktop\\Backend_Frontend\\reports\\output\\contact-coverage\\contact-coverage__20260418_150029__6ede3947.sql",
+  "previewRows" : [ {
+    "customer_id" : 103,
+    "customer_name" : "Sara Khan",
+    "customer_status" : "Inactive",
+    "country_of_origin" : "UAE",
+    "active_contact_count" : 0,
+    "has_email" : 0,
+    "has_phone" : 0,
+    "latest_contact_end_date" : null,
+    "coverage_status" : "NO_ACTIVE_CONTACT"
+  }, {
+    "customer_id" : 104,
+    "customer_name" : "David Johnson",
+    "customer_status" : "Active",
+    "country_of_origin" : "USA",
+    "active_contact_count" : 0,
+    "has_email" : 0,
+    "has_phone" : 0,
+    "latest_contact_end_date" : null,
+    "coverage_status" : "NO_ACTIVE_CONTACT"
+  }, {
+    "customer_id" : 102,
+    "customer_name" : "Rahul Mehta",
+    "customer_status" : "Active",
+    "country_of_origin" : "India",
+    "active_contact_count" : 1,
+    "has_email" : 1,
+    "has_phone" : 0,
+    "latest_contact_end_date" : "2027-12-31",
+    "coverage_status" : "MISSING_PHONE"
+  }, {
+    "customer_id" : 101,
+    "customer_name" : "Ananya Sharma",
+    "customer_status" : "Active",
+    "country_of_origin" : "India",
+    "active_contact_count" : 2,
+    "has_email" : 1,
+    "has_phone" : 1,
+    "latest_contact_end_date" : "2027-12-31",
+    "coverage_status" : "OK"
+  }, {
+    "customer_id" : 105,
+    "customer_name" : "Meera Iyer",
+    "customer_status" : "Active",
+    "country_of_origin" : "India",
+    "active_contact_count" : 2,
+    "has_email" : 1,
+    "has_phone" : 1,
+    "latest_contact_end_date" : "2027-12-31",
+    "coverage_status" : "OK"
+  }, {
+    "customer_id" : 106,
+    "customer_name" : "Omar Hassan",
+    "customer_status" : "Active",
+    "country_of_origin" : "Qatar",
+    "active_contact_count" : 2,
+    "has_email" : 1,
+    "has_phone" : 1,
+    "latest_contact_end_date" : "2027-12-31",
+    "coverage_status" : "OK"
+  } ]
+}

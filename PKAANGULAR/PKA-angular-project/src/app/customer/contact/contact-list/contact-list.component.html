@@ -1,0 +1,101 @@
+<div class="container">
+
+<h2>Customer Contact</h2>
+
+<form (ngSubmit)="saveContact()">
+
+<div>
+<label>Customer ID</label>
+<input type="number"
+[(ngModel)]="contactForm.customerIdentifier"
+name="customerIdentifier"
+required>
+</div>
+
+<div>
+<label>Contact Type</label>
+<input type="text"
+[(ngModel)]="contactForm.customerContactType"
+name="customerContactType"
+required>
+</div>
+
+<div>
+<label>Contact Value</label>
+<input type="text"
+[(ngModel)]="contactForm.customerContactValue"
+name="customerContactValue"
+required>
+</div>
+
+<div>
+<label>Start Date</label>
+<input type="date"
+[(ngModel)]="contactForm.startDate"
+name="startDate"
+required>
+</div>
+
+<div>
+<label>End Date</label>
+<input type="date"
+[(ngModel)]="contactForm.endDate"
+name="endDate"
+required>
+</div>
+
+<div>
+<label>Effective Date</label>
+<input type="date"
+[(ngModel)]="contactForm.effectiveDate"
+name="effectiveDate"
+required>
+</div>
+
+<button type="submit">
+{{ isEditing ? 'Update' : 'Add' }}
+</button>
+
+<button type="button" (click)="resetForm()">Cancel</button>
+
+</form>
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Customer</th>
+<th>Type</th>
+<th>Value</th>
+<th>Start</th>
+<th>End</th>
+<th>Effective</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr *ngFor="let c of contacts">
+
+<td>{{c.contactInformationId}}</td>
+<td>{{c.customerIdentifier}}</td>
+<td>{{c.customerContactType}}</td>
+<td>{{c.customerContactValue}}</td>
+<td>{{c.startDate}}</td>
+<td>{{c.endDate}}</td>
+<td>{{c.effectiveDate}}</td>
+
+<td>
+<button (click)="editContact(c)">Edit</button>
+<button (click)="deleteContact(c.contactInformationId)">Delete</button>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>

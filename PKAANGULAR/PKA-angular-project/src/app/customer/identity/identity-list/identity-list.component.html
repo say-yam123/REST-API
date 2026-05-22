@@ -1,0 +1,101 @@
+<div class="container">
+
+<h2>Identity Management</h2>
+
+<form (ngSubmit)="saveIdentity()">
+
+<div>
+<label>Customer ID</label>
+<input type="number"
+[(ngModel)]="identityForm.customerIdentifier"
+name="customerIdentifier"
+required>
+</div>
+
+<div>
+<label>Proof Type</label>
+<input type="text"
+[(ngModel)]="identityForm.proofOfIdType"
+name="proofOfIdType"
+required>
+</div>
+
+<div>
+<label>Proof Value</label>
+<input type="text"
+[(ngModel)]="identityForm.proofOfIdValue"
+name="proofOfIdValue"
+required>
+</div>
+
+<div>
+<label>Issue Date</label>
+<input type="date"
+[(ngModel)]="identityForm.startDate"
+name="startDate"
+required>
+</div>
+
+<div>
+<label>Expiry Date</label>
+<input type="date"
+[(ngModel)]="identityForm.endDate"
+name="endDate"
+required>
+</div>
+
+<div>
+<label>Effective Date</label>
+<input type="date"
+[(ngModel)]="identityForm.effectiveDate"
+name="effectiveDate"
+required>
+</div>
+
+<button type="submit">
+{{ isEditing ? 'Update' : 'Add' }}
+</button>
+
+<button type="button" (click)="resetForm()">Cancel</button>
+
+</form>
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Customer</th>
+<th>Type</th>
+<th>Value</th>
+<th>Issue</th>
+<th>Expiry</th>
+<th>Effective</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr *ngFor="let i of identities">
+
+<td>{{i.proofOfId}}</td>
+<td>{{i.customerIdentifier}}</td>
+<td>{{i.proofOfIdType}}</td>
+<td>{{i.proofOfIdValue}}</td>
+<td>{{i.startDate}}</td>
+<td>{{i.endDate}}</td>
+<td>{{i.effectiveDate}}</td>
+
+<td>
+<button (click)="editIdentity(i)">Edit</button>
+<button (click)="deleteIdentity(i.proofOfId)">Delete</button>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>

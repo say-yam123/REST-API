@@ -1,0 +1,55 @@
+/* Layout container */
+.app-container {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background-color: #000000;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #0b1b69;
+  padding: 10px;
+  gap: 15px;
+}
+
+/* Links */
+.navbar a {
+  color: #e2e8f0;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+/* Hover effect */
+.navbar a:hover {
+  background-color: #475569;
+}
+
+/* Active route */
+.navbar a.active {
+  background-color: #9feb10;
+  color: white;
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #123745;
+}
+body{
+  color:#000000;
+}

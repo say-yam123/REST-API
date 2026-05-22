@@ -1,0 +1,138 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Page container */
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Headings */
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* FORM */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+input {
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0ea5e9;
+}
+
+/* Buttons */
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Submit */
+button[type="submit"] {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #0284c7;
+}
+
+/* Cancel */
+button[type="button"] {
+  background-color: #94a3b8;
+  color: white;
+}
+
+button[type="button"]:hover {
+  background-color: #64748b;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+/* Action buttons */
+td button {
+  margin: 2px;
+  padding: 6px 10px;
+}
+
+/* Edit */
+td button:first-child {
+  background-color: #22c55e;
+  color: white;
+}
+
+td button:first-child:hover {
+  background-color: #16a34a;
+}
+
+/* Delete */
+td button:last-child {
+  background-color: #ef4444;
+  color: white;
+}
+
+td button:last-child:hover {
+  background-color: #dc2626;
+}

@@ -1,0 +1,78 @@
+<div class="container">
+
+<h2>Customer Address</h2>
+
+<form (ngSubmit)="saveAddress()">
+
+<div>
+<label>Customer ID</label>
+<input type="number"
+[(ngModel)]="addressForm.customerIdentifier"
+name="customerIdentifier"
+required>
+</div>
+
+<div>
+<label>Address Type</label>
+<input type="text"
+[(ngModel)]="addressForm.customerAddressType"
+name="customerAddressType">
+</div>
+
+<div>
+<label>Address Value</label>
+<input type="text"
+[(ngModel)]="addressForm.customerAddressValue"
+name="customerAddressValue">
+</div>
+
+<div>
+<label>Effective Date</label>
+<input type="date"
+[(ngModel)]="addressForm.effectiveDate"
+name="effectiveDate">
+</div>
+
+<button type="submit">
+{{ isEditing ? 'Update' : 'Add' }}
+</button>
+
+<button type="button" (click)="resetForm()">Cancel</button>
+
+</form>
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Customer</th>
+<th>Type</th>
+<th>Value</th>
+<th>Effective Date</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr *ngFor="let a of addresses">
+
+<td>{{a.addressId}}</td>
+<td>{{a.customerIdentifier}}</td>
+<td>{{a.customerAddressType}}</td>
+<td>{{a.customerAddressValue}}</td>
+<td>{{a.effectiveDate}}</td>
+
+<td>
+<button (click)="editAddress(a)">Edit</button>
+<button (click)="deleteAddress(a.addressId)">Delete</button>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>

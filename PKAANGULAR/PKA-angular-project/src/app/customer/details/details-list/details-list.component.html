@@ -1,0 +1,111 @@
+<div class="container">
+
+<h2>Customer Details</h2>
+
+<form (ngSubmit)="saveDetails()">
+
+<div>
+<label>Full Name</label>
+<input type="text"
+[(ngModel)]="detailForm.customerFullName"
+name="customerFullName"
+required>
+</div>
+
+<div>
+<label>Country Of Origin</label>
+<input type="text"
+[(ngModel)]="detailForm.customerCountryOfOrigin"
+name="customerCountryOfOrigin"
+required>
+</div>
+
+<div>
+<label>Date Of Birth</label>
+<input type="date"
+[(ngModel)]="detailForm.customerDateOfBirth"
+name="customerDateOfBirth"
+required>
+</div>
+
+<div>
+<label>Gender</label>
+<input type="text"
+[(ngModel)]="detailForm.customerGender"
+name="customerGender"
+required>
+</div>
+
+<div>
+<label>Preferred Language</label>
+<input type="text"
+[(ngModel)]="detailForm.customerPreferredLanguage"
+name="customerPreferredLanguage"
+required>
+</div>
+
+<div>
+<label>Status</label>
+<input type="text"
+[(ngModel)]="detailForm.customerStatus"
+name="customerStatus"
+required>
+</div>
+
+<div>
+<label>Customer Type</label>
+<input type="number"
+[(ngModel)]="detailForm.customerType"
+name="customerType"
+required>
+</div>
+
+<button type="submit">
+{{ isEditing ? 'Update' : 'Add' }}
+</button>
+
+<button type="button" (click)="resetForm()">Cancel</button>
+
+</form>
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Country</th>
+<th>DOB</th>
+<th>Gender</th>
+<th>Language</th>
+<th>Status</th>
+<th>Type</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr *ngFor="let d of details">
+
+<td>{{d.customerIdentifier}}</td>
+<td>{{d.customerFullName}}</td>
+<td>{{d.customerCountryOfOrigin}}</td>
+<td>{{d.customerDateOfBirth}}</td>
+<td>{{d.customerGender}}</td>
+<td>{{d.customerPreferredLanguage}}</td>
+<td>{{d.customerStatus}}</td>
+<td>{{d.customerType}}</td>
+
+<td>
+<button (click)="editDetails(d)">Edit</button>
+<button (click)="deleteDetails(d.customerIdentifier)">Delete</button>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>

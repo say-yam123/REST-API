@@ -1,0 +1,89 @@
+{
+  "reportName" : "kyc-expiry",
+  "format" : "HTML",
+  "runId" : "b4306af1",
+  "generatedAt" : "2026-04-18T09:30:46.038155700Z",
+  "durationMs" : 8,
+  "parameters" : {
+    "startDate" : null,
+    "endDate" : null,
+    "asOfDate" : "2026-04-18",
+    "status" : null,
+    "country" : null,
+    "contactType" : null,
+    "proofType" : null
+  },
+  "rowCount" : 6,
+  "columns" : [ "customer_id", "customer_name", "customer_status", "proof_type", "proof_value", "proof_start_date", "proof_end_date", "proof_status" ],
+  "nullCounts" : {
+    "customer_id" : 0,
+    "customer_name" : 0,
+    "customer_status" : 0,
+    "proof_type" : 1,
+    "proof_value" : 1,
+    "proof_start_date" : 1,
+    "proof_end_date" : 1,
+    "proof_status" : 0
+  },
+  "duplicateRowCount" : 0,
+  "warnings" : [ ],
+  "outputFile" : "c:\\Users\\Anmol\\OneDrive\\Desktop\\Backend_Frontend\\reports\\output\\kyc-expiry\\kyc-expiry__20260418_150046__b4306af1.html",
+  "outputSizeBytes" : 2255,
+  "outputChecksumSha256" : "125509a85603c0d3da53e18f8ad2ae539b26414a6f2fb67c0f235726dbe211a5",
+  "sqlSnapshotFile" : "c:\\Users\\Anmol\\OneDrive\\Desktop\\Backend_Frontend\\reports\\output\\kyc-expiry\\kyc-expiry__20260418_150046__b4306af1.sql",
+  "previewRows" : [ {
+    "customer_id" : 103,
+    "customer_name" : "Sara Khan",
+    "customer_status" : "Inactive",
+    "proof_type" : "NATIONAL_ID",
+    "proof_value" : "UAE103NID",
+    "proof_start_date" : "2024-12-01",
+    "proof_end_date" : "2025-03-31",
+    "proof_status" : "EXPIRED"
+  }, {
+    "customer_id" : 105,
+    "customer_name" : "Meera Iyer",
+    "customer_status" : "Active",
+    "proof_type" : null,
+    "proof_value" : null,
+    "proof_start_date" : null,
+    "proof_end_date" : null,
+    "proof_status" : "MISSING_PROOF"
+  }, {
+    "customer_id" : 102,
+    "customer_name" : "Rahul Mehta",
+    "customer_status" : "Active",
+    "proof_type" : "PASSPORT",
+    "proof_value" : "P102IND",
+    "proof_start_date" : "2025-01-01",
+    "proof_end_date" : "2026-04-20",
+    "proof_status" : "VALID"
+  }, {
+    "customer_id" : 106,
+    "customer_name" : "Omar Hassan",
+    "customer_status" : "Active",
+    "proof_type" : "PASSPORT",
+    "proof_value" : "QAT106PASS",
+    "proof_start_date" : "2025-01-20",
+    "proof_end_date" : "2027-01-20",
+    "proof_status" : "VALID"
+  }, {
+    "customer_id" : 101,
+    "customer_name" : "Ananya Sharma",
+    "customer_status" : "Active",
+    "proof_type" : "PASSPORT",
+    "proof_value" : "P101IND",
+    "proof_start_date" : "2025-01-01",
+    "proof_end_date" : "2027-12-31",
+    "proof_status" : "VALID"
+  }, {
+    "customer_id" : 104,
+    "customer_name" : "David Johnson",
+    "customer_status" : "Active",
+    "proof_type" : "DRIVING_LICENSE",
+    "proof_value" : "DL104USA",
+    "proof_start_date" : "2025-03-01",
+    "proof_end_date" : "2028-03-01",
+    "proof_status" : "VALID"
+  } ]
+}

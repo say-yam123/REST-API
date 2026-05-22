@@ -1,0 +1,79 @@
+<div class="container">
+
+  <h2>Customer Classification</h2>
+
+  <form (ngSubmit)="saveClassification()">
+
+    <div>
+      <label>Classification Type</label>
+      <input
+        type="text"
+        [(ngModel)]="classificationForm.customerClassificationType"
+        name="customerClassificationType"
+        required
+      />
+    </div>
+
+    <div>
+      <label>Classification Value</label>
+      <input
+        type="text"
+        [(ngModel)]="classificationForm.customerClassificationValue"
+        name="customerClassificationValue"
+        required
+      />
+    </div>
+
+    <div>
+      <label>Effective Date</label>
+      <input
+        type="date"
+        [(ngModel)]="classificationForm.effectiveDate"
+        name="effectiveDate"
+        required
+      />
+    </div>
+
+    <button type="submit">
+      {{ isEditing ? 'Update' : 'Add' }}
+    </button>
+
+    <button type="button" (click)="resetForm()">Cancel</button>
+
+  </form>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Value</th>
+        <th>Effective Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let classification of classifications">
+
+        <td>{{classification.customerClassificationId}}</td>
+        <td>{{classification.customerClassificationType}}</td>
+        <td>{{classification.customerClassificationValue}}</td>
+        <td>{{classification.effectiveDate}}</td>
+
+        <td>
+          <button (click)="editClassification(classification)">Edit</button>
+          <button (click)="deleteClassification(classification.customerClassificationId)">
+            Delete
+          </button>
+        </td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
